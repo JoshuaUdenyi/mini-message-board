@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+
+    <div>
+        <ul>
+            <% messages.forEach(message=> { %>
+                <li>
+                    <strong>
+                        <%= message.user %>
+                    </strong>: <%= message.text %> <em>(<%= message.added.toLocaleString() %>)</em>
+                </li>
+                <button><a href="/message/<%= message.user %>">Open Message</a></button>
+                <% }); %>
+
+                
+        </ul>
+    </div>
+
+    <button><a href="/new">New Message</a></button>
+</body>
+
+</html>
