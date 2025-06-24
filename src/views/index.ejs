@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css">
+    <title><%= title %></title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1><%= title %></h1>
+      </header>
+      <section>
+        <a class="btn" href="/new">Send a new message</a>
+      </section>
+      <section>
+        <% messages.forEach((message) => { %>
+        <a class="message" href="/message/<%= message.user %>">
+          <div class="open-overlay">open</div>
+          <h3><%= message.user %></h3>
+          <p><i><%= message.added %></i></p>
+          <p><%= message.text %></p>
+        </a>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>

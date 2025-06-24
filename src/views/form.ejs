@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Shoot me a message</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Message Form</h1>
+      </header>
+      <section>
+        <a class="btn reduced" href="/"> Go back </a>
+        <form method="POST" action="/new">
+          <div>
+            <label for="authorname">Your Name : </label>
+            <input type="text" name="user" id="authorname" required />
+          </div>
+          <div class="has-textarea">
+            <label for="bio">Your message : </label>
+            <textarea
+              name="message"
+              id="bio"
+              placeholder="Write your message here"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
